@@ -1,6 +1,6 @@
 ## Jade-Sass Starter project.
 
-This is a Jade and Sass starter project using gulp based on [Jade Sass Starter](https://github.com/azemoh/gulp-pug-sass-seed/) and [Bemskel](https://github.com/karloespiritu/bemskel).
+This is a Jade and Sass starter project using gulp based on [Jade Sass Starter](https://github.com/azemoh/gulp-jade-sass-starter/) and [Bemskel](https://github.com/karloespiritu/bemskel).
 
 
 ### To run
