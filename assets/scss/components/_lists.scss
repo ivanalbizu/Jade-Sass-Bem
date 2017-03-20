@@ -1,0 +1,16 @@
+// Lists
+
+.list__horizontal {
+  list-style: none;
+  .list__item {
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+    &--first {
+      margin-left: 0;
+    }
+    &--active {
+      color: #ccc;
+    }
+  }
+}
