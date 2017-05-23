@@ -15,7 +15,11 @@ there.
 @media (#{$bp-larger-than-phablet}) {}
 
 // Larger than tablet
-@media (#{$bp-larger-than-tablet}) {}
+@media (#{$bp-larger-than-tablet}) {
+    .u-hide-responsive {
+        display: inherit;
+    }
+}
 
 // Larger than desktop
 @media (#{$bp-larger-than-desktop}) {}

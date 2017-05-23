@@ -23,6 +23,9 @@
   opacity: .5;
   pointer-events: none;
 }
+.u-hide-responsive {
+    display: none;
+}
 
 /**
  * Clear inner floats
@@ -65,7 +68,6 @@
 }
 
 // Alignment
-
 .u-ta-left {
   text-align: left;
 }
@@ -78,3 +80,7 @@
   text-align: right;
 }
 
+// Fonts
+.u-uppercase {
+  text-transform: uppercase;
+}

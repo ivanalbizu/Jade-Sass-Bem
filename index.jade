@@ -2,14 +2,88 @@ extends _layouts/home
 
 block content
 	include _partials/header
-	
+
 	main
-		.container
-			.row
-				.col.col--12
-					p Home
+		.section.banner
+			.container
+				.row
+					.col.col--5.col--offset-1 
+						h1.banner-title Lorem Ipsum es texto de relleno
+		.section
+			.container.content
+				.flex-grid.flex-grid--lg
+					.flex-grid__col.flex-grid__col--lg
+						div.post-entry.post-entry--sticky
+							img(src="assets/img/im_outstanding_post.jpg", alt="Img")
+							div.featured-post
+								h3.title-post.u-uppercase Guitar
+								h2 Special course of guitar
+								span 20/03/2017
+						div.three-column
+							div.post-entry.post-entry--bb-2
+								img(src="assets/img/im_post1.jpg", alt="Img")
+								.featured-post-content
+									h5.title-post.u-uppercase Guitar
+									h4 Guitar course
+									span.post-detail 20/03/2017
+									p Lorem ipsum dolor sit amet lines.
+									a.btn-see-more(href="#", title="See more")
+									span.post-detail.u-uppercase Arquitectura, Diseño, Alquiler
+							div.post-entry.post-entry--bb-1
+								img(src="assets/img/im_post3.jpg", alt="Img")
+								.featured-post-content
+									h5.title-post.u-uppercase Guitar
+									h4 Guitar course
+									span.post-detail 20/03/2017
+									p Lorem ipsum dolor sit amet, animi quo mollitia culpa, similique.
+									a.btn-see-more(href="#", title="See more")
+									span.post-detail.u-uppercase Arquitectura, Diseño, Alquiler
+							div.post-entry.post-entry--bb-3
+								img(src="assets/img/im_post2.jpg", alt="Img")
+								.featured-post-content
+									h5.title-post.u-uppercase Piano
+									h4 Piano course
+									span.post-detail 20/03/2017
+									p Lorem ipsum dolor sit amet, animi quo mollitia culpa lines.
+									a.btn-see-more(href="#", title="See more")
+									span.post-detail.u-uppercase Arquitectura, Diseño, Alquiler
+							div.post-entry.post-entry--bb-3
+								img(src="assets/img/im_post4.jpg", alt="Img")
+								.featured-post-content
+									h5.title-post.u-uppercase Dj
+									h4 Dj course
+									span.post-detail 20/03/2017
+									p Lorem ipsum dolor sit amet, animi quo mollitia culpa, similique.
+									a.btn-see-more(href="#", title="See more")
+									span.post-detail.u-uppercase Arquitectura, Diseño, Alquiler
+					.flex-grid__col.sidebar
+						input.input-search.u-full-width(type="text", placeholder="Search")
+						p.title-sidebar.u-uppercase Discussion
+						p.icon-arrow-right.u-uppercase Technology
+						p
+							strong Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem nisi, expedita itaque culpa labore totam. 
+							| Excepturi sint repudiandae laboriosam, pariatur, esse ullam eius deserunt harum omnis animi unde earum, in!
+						.box-sidebar
+							p Share your posts. In Bored Company you have who listens to you.
+							input.btn.btn--primary.u-full-width.u-uppercase(type="reset" value="Join")
+						.box-sidebar
+							p All the news of music in our Bulletin.
+							input.u-full-width(type="text", placeholder="Mail address")
+							input.btn.btn--secondary.u-full-width.u-uppercase(type="reset" value="Subscribe")
+						p.title-sidebar.u-uppercase Tags
+						.box-sidebar-tag
+							a(href="#" class="tag-link") Software
+							a(href="#" class="tag-link") Cms
+							a(href="#" class="tag-link") Jade
+							a(href="#" class="tag-link") Pug
+							a(href="#" class="tag-link") Sass
+							a(href="#" class="tag-link") Bem
+							a(href="#" class="tag-link") Html
+							a(href="#" class="tag-link") Servicios informaticos
+
+
 					
 	include _partials/footer
 
 block body_end
-	script(type="text/javascript" src="assets/js/script.js")
+	script(type="text/javascript" src="assets/js/all.min.js")

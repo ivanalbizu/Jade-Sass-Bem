@@ -2,6 +2,12 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+$padding-inner-column: 15px;
+$bg-content: rgba(242, 242, 242, 1);
+$color-border-1: rgba(96, 178, 202, 1);
+$color-border-2: rgba(210, 89, 80, 1);
+$color-border-3: rgba(252, 172, 1, 1);
+
 // Breakpoints
 $bp-larger-than-mobile    : "min-width: 400px" !default;
 $bp-larger-than-phablet   : "min-width: 550px" !default;
@@ -39,7 +45,7 @@ $gray-darker:            #545454;
 $gray-darkest:           #2a2a2a;
 
 // Classic brand colors
-$color-primary:         rgba(52, 152, 219,1.0);
+$color-primary:         rgba(208, 89, 85, 1.0);
 $color-primary--dark:   darken($color-primary, 5%) !default;
 $color-secondary:       $gray-dark !default;
 

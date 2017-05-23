@@ -1,35 +1,95 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jade-Sass Starter</title>
+    <title>Home Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <header>
+    <nav class="navbar navbar--transparent">
       <div class="container">
-        <div class="row">
-          <div class="col col--5">
-            <h1>Logo</h1>
-          </div>
-          <div class="col col--7">
-            <nav>
-              <ul class="list__horizontal">
-                <li class="list__item list__item--first"><a href="./">home</a></li>
-                <li class="list__item list__item--active"><a href="./about.html">about</a></li>
-                <li class="list__item"><a href="./contact.html">contact</a></li>
-              </ul>
-            </nav>
+        <h1 class="vertical-center"><img src="assets/img/im_header_logo.png" alt="Log"></h1><a id="header__icon" class="header__icon"></a>
+        <ul class="navbar--user">
+          <li class="navbar__item"><a href="#" class="navbar__link"><img src="assets/img/ic_search.png" alt="Search" class="vertical-center user_account"></a></li>
+          <li class="navbar__item"><a href="#" class="navbar__link"><img src="assets/img/ic_user.png" alt="User" class="vertical-center user_account"></a></li>
+        </ul>
+        <ul class="navbar--horizontal">
+          <li class="navbar__item"><a href="#" class="navbar__link navbar__link--color-1">home</a></li>
+          <li class="navbar__item"><a href="#" class="navbar__link navbar__link--color-2">about</a></li>
+          <li class="navbar__item"><a href="#" class="navbar__link navbar__link--color-3">contact</a></li>
+          <li class="navbar__item u-hide-responsive"><a href="#" class="navbar__link"><img src="assets/img/ic_user.png" alt="User" class="vertical-center user_account">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="section banner">
+        <div class="container">
+          <div class="row">
+            <div class="col col--5 col--offset-1"> 
+              <h1 class="banner-title">Lorem Ipsum es texto de relleno</h1>
+            </div>
           </div>
         </div>
       </div>
-    </header>
-    <main>
-      <div class="container">
-        <div class="row">
-          <div class="col col--12">
-            <p>Home</p>
+      <div class="section">
+        <div class="container content">
+          <div class="flex-grid flex-grid--lg">
+            <div class="flex-grid__col flex-grid__col--lg">
+              <div class="post-entry post-entry--sticky"><img src="assets/img/im_outstanding_post.jpg" alt="Img">
+                <div class="featured-post">
+                  <h3 class="title-post u-uppercase">Guitar</h3>
+                  <h2>Special course of guitar</h2><span>20/03/2017</span>
+                </div>
+              </div>
+              <div class="three-column">
+                <div class="post-entry post-entry--bb-2"><img src="assets/img/im_post1.jpg" alt="Img">
+                  <div class="featured-post-content">
+                    <h5 class="title-post u-uppercase">Guitar</h5>
+                    <h4>Guitar course</h4><span class="post-detail">20/03/2017</span>
+                    <p>Lorem ipsum dolor sit amet lines.</p><a href="#" title="See more" class="btn-see-more"></a><span class="post-detail u-uppercase">Arquitectura, Diseño, Alquiler</span>
+                  </div>
+                </div>
+                <div class="post-entry post-entry--bb-1"><img src="assets/img/im_post3.jpg" alt="Img">
+                  <div class="featured-post-content">
+                    <h5 class="title-post u-uppercase">Guitar</h5>
+                    <h4>Guitar course</h4><span class="post-detail">20/03/2017</span>
+                    <p>Lorem ipsum dolor sit amet, animi quo mollitia culpa, similique.</p><a href="#" title="See more" class="btn-see-more"></a><span class="post-detail u-uppercase">Arquitectura, Diseño, Alquiler</span>
+                  </div>
+                </div>
+                <div class="post-entry post-entry--bb-3"><img src="assets/img/im_post2.jpg" alt="Img">
+                  <div class="featured-post-content">
+                    <h5 class="title-post u-uppercase">Piano</h5>
+                    <h4>Piano course</h4><span class="post-detail">20/03/2017</span>
+                    <p>Lorem ipsum dolor sit amet, animi quo mollitia culpa lines.</p><a href="#" title="See more" class="btn-see-more"></a><span class="post-detail u-uppercase">Arquitectura, Diseño, Alquiler</span>
+                  </div>
+                </div>
+                <div class="post-entry post-entry--bb-3"><img src="assets/img/im_post4.jpg" alt="Img">
+                  <div class="featured-post-content">
+                    <h5 class="title-post u-uppercase">Dj</h5>
+                    <h4>Dj course</h4><span class="post-detail">20/03/2017</span>
+                    <p>Lorem ipsum dolor sit amet, animi quo mollitia culpa, similique.</p><a href="#" title="See more" class="btn-see-more"></a><span class="post-detail u-uppercase">Arquitectura, Diseño, Alquiler</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grid__col sidebar">
+              <input type="text" placeholder="Search" class="input-search u-full-width">
+              <p class="title-sidebar u-uppercase">Discussion</p>
+              <p class="icon-arrow-right u-uppercase">Technology</p>
+              <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem nisi, expedita itaque culpa labore totam. </strong>Excepturi sint repudiandae laboriosam, pariatur, esse ullam eius deserunt harum omnis animi unde earum, in!</p>
+              <div class="box-sidebar">
+                <p>Share your posts. In Bored Company you have who listens to you.</p>
+                <input type="reset" value="Join" class="btn btn--primary u-full-width u-uppercase">
+              </div>
+              <div class="box-sidebar">
+                <p>All the news of music in our Bulletin.</p>
+                <input type="text" placeholder="Mail address" class="u-full-width">
+                <input type="reset" value="Subscribe" class="btn btn--secondary u-full-width u-uppercase">
+              </div>
+              <p class="title-sidebar u-uppercase">Tags</p>
+              <div class="box-sidebar-tag"><a href="#" class="tag-link">Software</a><a href="#" class="tag-link">Cms</a><a href="#" class="tag-link">Jade</a><a href="#" class="tag-link">Pug</a><a href="#" class="tag-link">Sass</a><a href="#" class="tag-link">Bem</a><a href="#" class="tag-link">Html</a><a href="#" class="tag-link">Servicios informaticos</a></div>
+            </div>
           </div>
         </div>
       </div>
@@ -47,6 +107,6 @@
       </div>
     </footer>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/all.min.js"></script>
   </body>
 </html>

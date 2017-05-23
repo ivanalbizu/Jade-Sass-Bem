@@ -1,3 +1,147 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+body {
+    color: #747474;
+}
+.banner {
+    padding: 16rem 0 10rem;//10 = 16 - 6 (alto nav)
+    margin: 0 0 1rem;
+    background-image: url("../img/im_header.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333;
+    .banner-title {
+        font-size: 4rem;
+        color: white;
+    }
+}
+.content {
+    padding: 25px 20px 20px;
+    background-color: $bg-content;
+}
+.post-entry {
+    width: 100%;
+    display:table;
+    position: relative;
+    background-color: #FFF;
+    margin-bottom: 12px;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    border-bottom: 4px solid $color-border-1;
+    .featured-post {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        vertical-align: bottom;
+        padding: 10px 15px;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    .featured-post-content {
+        padding: 15px;
+    }
+    .post-detail {
+        font-size: 1.2rem;
+    }
+    .title-post {
+        font-size: 1.2rem;
+    }
+    &--sticky {
+        display: inline-block;
+        margin-bottom: 13px;
+    }
+    &--bb-2 {
+        border-bottom-color: $color-border-2;
+    }
+    &--bb-3 {
+        border-bottom-color: $color-border-3;
+    }
+}
+.three-column {
+    column-count: 3;
+    column-gap: 10px;
+}
+.btn-see-more {
+    background: url("../img/ic_more.png") no-repeat top center;
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0 auto 13px;
+}
+.sidebar {
+    padding: 15px;
+    background-color: #FFF;
+    .box-sidebar {
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: rgba($bg-content, 0.5);
+        p {
+            margin-bottom: 1.4rem;
+            font-size: 1.8rem;
+        }
+        input {
+            font-size: 1.2rem;
+        }
+    }
+    .box-sidebar-tag {
+        .tag-link {
+            display: inline-block;
+            margin-bottom: 13px;
+            margin-right: 13px;
+            padding: 3px 17px;
+            border-radius: 15px;
+            font-size: 1.3rem;
+            color: inherit;
+            background-color: darken( $bg-content, 5% );
+        }
+    }
+    .title-sidebar {
+        font-size: 1.3rem;
+        margin-bottom: 1.3rem;
+    }
+    .input-search {
+        background: url("../img/ic_search.png") no-repeat center right;
+        background-position-x: 97%;
+        margin-bottom: 2rem;
+    }
+    .icon-arrow-right {
+        background: url("../img/ic_right_arrow.png") no-repeat center left;
+        padding-left: 20px;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+}
+.vertical-center {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin: 0;
+}
+.user_account {
+    padding-right: 1rem;
+}
+
+
+
+@media (max-width: 749px){
+    .three-column {
+        column-count: 2;
+    }
+}
+@media (max-width: 549px){
+    .post-entry {
+        .featured-post {
+            position: static;
+        }
+    }
+    .three-column {
+        column-count: 1;
+    }
+    .post-entry img,
+    .post-entry video {
+        width: 100%;
+    }
+}

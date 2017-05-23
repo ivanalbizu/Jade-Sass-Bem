@@ -3,6 +3,8 @@
 
 var gulp = require('gulp'),
 	path = require('path'),
+	uglify = require('gulp-uglify'),
+	concat = require('gulp-concat'),
 	data = require('gulp-data'),
 	jade = require('gulp-jade'),
 	prefix = require('gulp-autoprefixer'),
@@ -15,7 +17,9 @@ var gulp = require('gulp'),
 var settings = {
 	publicDir: '_site',
 	sassDir: 'assets/scss',
-	cssDir: '_site/assets/css'
+	cssDir: '_site/assets/css',
+	jsOut: '_site/assets/js',
+	jsDir: 'assets/js'
 };
 
 /**
@@ -25,6 +29,14 @@ function requireUncached( $module ) {
     delete require.cache[require.resolve( $module )];
     return require( $module );
 }
+
+gulp.task('js', function() {
+	return gulp.src('assets/js/*.js')
+	.pipe( uglify() )
+	.pipe( concat('all.min.js'))
+	.pipe( gulp.dest(settings.jsOut))
+	.pipe( browserSync.reload({stream: true}));
+});
 
 /**
  * Compile .jade files and pass in data from json file
@@ -51,7 +63,7 @@ gulp.task('jade-rebuild', ['jade'], function () {
 /**
  * Wait for jade and sass tasks, then launch the browser-sync Server
  */
-gulp.task('browser-sync', ['sass', 'jade'], function () {
+gulp.task('browser-sync', ['sass', 'jade', 'js'], function () {
 	browserSync({
 		server: {
 			baseDir: settings.publicDir
@@ -59,6 +71,7 @@ gulp.task('browser-sync', ['sass', 'jade'], function () {
 		notify: false
 	});
 });
+
 
 /**
  * Compile .scss files into public css directory With autoprefixer no
@@ -81,6 +94,7 @@ gulp.task('sass', function () {
  * Watch .jade files run jade-rebuild then reload BrowserSync
  */
 gulp.task('watch', function () {
+	gulp.watch(settings.jsDir + '/**.js',['js']);
 	gulp.watch(settings.sassDir + '/**', ['sass']);
 	gulp.watch(['*.jade', '**/*.jade', '**/*.json'], ['jade-rebuild']);
 });

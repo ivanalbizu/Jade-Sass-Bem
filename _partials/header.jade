@@ -1,11 +1,19 @@
-header
+nav.navbar.navbar--transparent
 	.container
-		.row
-			.col.col--5
-				h1 Logo
-			.col.col--7
-				nav
-					ul.list__horizontal
-						li.list__item.list__item--first: a(href="./") home
-						li.list__item.list__item--active: a(href="./about.html") about
-						li.list__item: a(href="./contact.html") contact
+		h1.vertical-center: img(src="assets/img/im_header_logo.png", alt="Log")
+		a#header__icon.header__icon
+		ul.navbar--user
+			li.navbar__item
+				a(href="#").navbar__link
+					img(src="assets/img/ic_search.png", alt="Search").vertical-center.user_account
+			li.navbar__item
+				a(href="#").navbar__link
+					img(src="assets/img/ic_user.png", alt="User").vertical-center.user_account
+		ul.navbar--horizontal
+			li.navbar__item: a(href="#").navbar__link.navbar__link--color-1 home
+			li.navbar__item: a(href="#").navbar__link.navbar__link--color-2 about
+			li.navbar__item: a(href="#").navbar__link.navbar__link--color-3 contact
+			li.navbar__item.u-hide-responsive
+				a(href="#").navbar__link
+					img(src="assets/img/ic_user.png", alt="User").vertical-center.user_account
+					| Profile
